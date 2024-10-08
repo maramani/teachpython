@@ -1,17 +1,33 @@
 # teach python basic
 
-def check(what):
-  ans = input(what)
-  if ans.lower in ('yes','y'):
+import pyttsx3
+import pydoc
+
+engine = pyttsx3.init()
+
+def communicate(what,msg):
+    return what(msg)
+
+def askquestion(msg):
+  ans = input(msg)
+  if ans.lower() in ('yes','y'):
     return True
   else:
     return False
-  
-if check("Do you know how to get input from user at runtime?"):
-  if check("Do you know how to print to sys outpit device?"):
-    print("good")
-  else:
-    print("learn using help(\"print\")")
+
+def respond(msg):
+  print(msg)
+  engine.say(msg)
+  engine.runAndWait()
+
+if communicate(askquestion, "Are you thorough with Python input statement?"):
+  communicate(respond, "Very good")
 else:
-  print("learn using help(\"input\")")
-      
+  communicate(respond, "Go to python consol and learn using help(\"input\"), "
+                     "this time I get it for you. See below. Happy learning!")
+  pydoc.pager(pydoc.render_doc(input))
+
+m = ("\nAmend this program to ask user how thorough he/she is with output statement(print), "
+     "control statements ( if, for, while), functions, Error Handling, Debugging")
+print('-' * len(m))
+print(m)
