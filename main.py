@@ -28,6 +28,6 @@ else:
   pydoc.pager(pydoc.render_doc(input))
 
 m = ("\nAmend this program to ask user how thorough he/she is with output statement(print), "
-     "control statements ( if, for, while)")
+     "control statements(if, for, while), functions (def)")
 print('-' * len(m))
-print(m)
+respond(m)
