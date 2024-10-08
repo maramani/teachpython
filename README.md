@@ -40,7 +40,7 @@ Except  |  except ZeroDivisionError: print("Error!")
 To learn more:
 
 - Use the built-in help() function: help(function_name) or help(module_name)
-- Official Python Documentation: (link unavailable)
-- Online Resources: W3Schools, Real Python, (link unavailable)
+- Official Python Documentation: (https://www.python.org)
+- Online Resources: W3Schools, Real Python, (Google them)
 
 Happy coding!
