@@ -9,7 +9,7 @@ def communicate(what,msg):
     return what(msg)
 
 def askquestion(msg):
-  ans = input(msg)
+  ans = input("Are you thorough with "+ msg + " statement")
   if ans.lower() in ('yes','y'):
     return True
   else:
@@ -20,7 +20,7 @@ def respond(msg):
   engine.say(msg)
   engine.runAndWait()
 
-if communicate(askquestion, "Are you thorough with Python input statement?"):
+if communicate(askquestion, "input"):
   communicate(respond, "Very good")
 else:
   communicate(respond, "Go to python consol and learn using help(\"input\"), "
@@ -28,6 +28,6 @@ else:
   pydoc.pager(pydoc.render_doc(input))
 
 m = ("\nAmend this program to ask user how thorough he/she is with output statement(print), "
-     "control statements ( if, for, while), functions, Error Handling, Debugging")
+     "control statements(if, for, while)")
 print('-' * len(m))
 print(m)
