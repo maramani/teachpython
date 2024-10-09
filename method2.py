@@ -28,5 +28,4 @@ def respond(msg):
     engine.runAndWait()
 
 
-for syntax in ["input", "print", "if", "while", "for", "def"]:
-    askquestion(syntax)
+askquestion("input")
