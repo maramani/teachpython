@@ -8,7 +8,7 @@ engine = pyttsx3.init()
 
 
 def askquestion(syn):
-    respond("Are you thorough with Python " + syn + " statement?")
+    respond("Are you thorough with Python " + syn + " usage")
     ans = input()
     if ans.lower() in ('yes', 'y'):
         respond("Very good")
